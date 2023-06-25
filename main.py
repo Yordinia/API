@@ -15,6 +15,15 @@ def get_user(user_id):
         user_data["extra"] = extra
     return jsonify(user_data), 200
 
+## POST request
+@app.route("/create-user", methods=["POST"])
+def create_user():
+    data = request.get_json()
+    return jsonify(data), 201
+
+# if request.method == "POST": ~ to check if its post with request
+
+
 
 # bASIC FLask app startup code
 # @app.route("/")
